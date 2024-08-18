@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Citizen Transport & Handelsrechner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-space-shuttle"></i> Star Citizen Transport & Handelsrechner</h1>
+            <p>Plane deine Routen und maximiere deinen Profit im Universum von Star Citizen.</p>
+            <p class="version">Version 1.0.2</p>
+            <p class="author">By Maujack</p>
+        </header>
+
+        <form>
+            <div class="form-group">
+                <label for="from-location"><i class="fas fa-map-marker-alt"></i> Von:</label>
+                <select id="from-location">
+                    <optgroup label="Städte">
+                        <option value="Lorville">Lorville</option>
+                        <option value="Area18">Area18</option>
+                        <option value="New Babbage">New Babbage</option>
+                        <option value="Orison">Orison</option>
+                    </optgroup>
+                    <optgroup label="Raumstationen">
+                        <option value="Port Tressler">Port Tressler</option>
+                        <option value="Everus Harbor">Everus Harbor</option>
+                        <option value="Bajini Point">Bajini Point</option>
+                        <option value="Grim Hex">Grim Hex</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="to-location"><i class="fas fa-map-signs"></i> Nach:</label>
+                <select id="to-location">
+                    <optgroup label="Städte">
+                        <option value="Lorville">Lorville</option>
+                        <option value="Area18">Area18</option>
+                        <option value="New Babbage">New Babbage</option>
+                        <option value="Orison">Orison</option>
+                    </optgroup>
+                    <optgroup label="Raumstationen">
+                        <option value="Port Tressler">Port Tressler</option>
+                        <option value="Everus Harbor">Everus Harbor</option>
+                        <option value="Bajini Point">Bajini Point</option>
+                        <option value="Grim Hex">Grim Hex</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="commodity"><i class="fas fa-box"></i> Warenart:</label>
+                <select id="commodity">
+                    <option value="Titanium">Titanium</option>
+                    <option value="Laranite">Laranite</option>
+                    <option value="Agricium">Agricium</option>
+                    <option value="Gold">Gold</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ship"><i class="fas fa-ship"></i> Schiff:</label>
+                <select id="ship">
+                    <option value="Aurora MR">Aurora MR (20 SCU)</option>
+                    <option value="Cutlass Black">Cutlass Black (30 SCU)</option>
+                    <option value="Constellation Andromeda">Constellation Andromeda (108 SCU)</option>
+                    <option value="Caterpillar">Caterpillar (288 SCU)</option>
+                    <option value="Crusader Mercury Star Runner">Crusader Mercury Star Runner (164 SCU)</option>
+                    <option value="Freelancer MAX">Freelancer MAX (120 SCU)</option>
+                    <option value="Vulture">Vulture (36 SCU)</option>
+                    <!-- MSR wurde entfernt -->
+                    <!-- Weitere Schiffe können hier hinzugefügt werden -->
+                </select>
+            </div>
+
+            <button type="button" onclick="calculateRoute()"><i class="fas fa-calculator"></i> Route & Preis Berechnen</button>
+        </form>
+
+        <div id="result" class="result-box"></div>
+
+        <button class="back-button" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-left"></i> Zurück
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
